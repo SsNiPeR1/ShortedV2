@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="/static/style.css">
     <script src="https://kit.fontawesome.com/e9230a7663.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <h1 class="homeh1">Shorted</h1>
-    <p class="codebox">
-        Hello World!
-    </p>
+    <form class="center" method="POST" action="/shorten">
+        <input type="text" name="url" placeholder="Enter URL">
+    </form>
     <p class="lowerright"><i class="fa-brands fa-git-alt"></i> Version: {{ commit_hash }}</p>
 </body>
+
 </html>

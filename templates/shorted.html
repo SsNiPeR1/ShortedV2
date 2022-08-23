@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Shorted</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <script>
+            function copyToClipboard(text) {
+                const elem = document.createElement('textarea');
+                elem.value = text;
+                document.body.appendChild(elem);
+                elem.select();
+                document.execCommand('copy');
+                document.body.removeChild(elem);
+            }
+        </script>
+        <script>window.location.href="/shorten#popup1"</script>
+    </head>
+
+    <body>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Your shorted URL: </h2>
+                <a class="close" href="/">&times;</a>
+                <div class="content">
+                    <p>https://shorted.tk/{{ short }}</p>
+                    <button class="button" onclick="copyToClipboard('https://shorted.tk/{{ short }}')">Copy to clipboard</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
